@@ -1,0 +1,157 @@
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Vitenskapsteori
+
+# Vitenskapsteori er læren om filosofien, metodene, strukturene og betydningene vitenskapen har. Vitenskap har eksistert i alle år, og har vært utrykket gjennom mer eller mindre strukturerte rammer. Ut ifra disse metodene, strukturene, og filosofien, har det kommet frem forskjellige teorier og metoder, som den moderne vitenskapen bygges på.
+
+Falsifiseringsprinsippet Karl Raimund Popper (1902-1994), var en
+Østerisk-Britisk filosof. Popper hadde siden høsten 1919 bearbeidet
+spørsmålet om hva som skulle til for å kunne dannet et skille mellom
+vitenskap og pseudo-vitenskap. På den tiden(starten av og et stykke inn
+på 1900tallet) var det en aksept for at skilnaden mellom vitenskap og
+pseudo-vitenskap, var den empiriske fremgangsmetoden(Popper, 1969,s.33).
+Den empiriske fremgangsmetoden går fra observasjoner, eller
+eksperimenter til å danne teorier ved hjelp av induktive argumenter. Et
+induktivt argument bygger på at premissene som er satt er sanne, og ved
+nok observasjoner av disse premissene, vil konklusjonen sannsynligvis
+være sann, eller man kan si at man har styrket bekreftelse av en teori.
+Denne tankerekkefølgen ble kritisert av David Hume (1711- 1776) allerede
+på 1700tallet. Hume stilte spørsmål for hvordan man kan slå fast at
+induksjon er pålitelig, og svaret ble ved hjelp av et argument. Hvilket
+argument skulle brukes? Induktiv metode kan ikke garanteres for ved et
+deduktivt argument, da det ikke finnes et deduktivt argument for
+fremtiden. Et induktivt argument bygger på erfaringer, men kan heller
+ikke slå fast induksjonens sikkerhet. Dette var kronglete å holde styr
+på i hodet, men var et fundamentet i kritikken av induksjonismen langt
+inn på 1900tallet. Popper som i utgangspunktet var ute etter å skille
+vitenskap fra pseudo-vitenskap viste om denne svakheten ved induktive
+argumenter som var det som var det opprinnelige skille. Ved hjelp av
+datidens største og mest fremgangsrike vitenskapsteorier lette Popper
+etter forskjeller. Einsteins relativitetsteori, marx historiske teorier,
+Freuds psyko-analyser, og Alfred Adlers individuelle psykologi var de
+mest omtalte teoriene på den tiden. Når han etter hvert oppdaget at
+flere av punktene i de forskjllige teoriene ble bekreftet, ble han også
+mens tiden gikk mindre og mindre imponert av Marx, Freud og Adler. Det
+var her han startet å se etter forskjeller. De andre teoriene hadde
+mange bekreftelser, og hvert eneste tilfelle kunne på en eller annen
+måte forklares ved hjelp av teoriene. Einsteins relativitetsteori kunne
+derimot 3
+
+motsies ved hjelp av en eksakt måling. Ut av dette vokste Poppers
+falsifiserbarhetskriterium. (Popper, 1969,s.34-35)
+Falsifiserbarhetskriteriumet vokste altså frem av at en teori ikke burde
+bekreftes, men avkreftes, eller falsifiseres som det kalles
+vitenskapelig. Teorien må derfor være så konkret at den kan måles, og
+dermed falsifiseres. Et eksmpel kan være: «det kommer til å regne i
+morgen». Dette utsagnet vil i løpet av morgendagen kunne falsifiseres,
+hvis det blir oppholdsvær. Om det skulle regne, vil det komme en ny
+morgendag, der teorien kan falsifiseres. Dette vil skille
+pseudo-vitenskap og vitenskap i og kalles for Poppers
+demarkasjonskriterium. Vitenskap vil derfor være alle teorier som kan
+falsifiseres. Når noe er falsifisert vil det vokse frem en ny
+falsifiserbar teori, og vitenskapen som en enhet vil etter hvert nærme
+seg en sannhet. Med dette kriterium mente også popper at
+induksjonsproblemet også var løst. Dette mente han ved at alle
+vitenskapelige teorier er deduktive argumenter som falsifiserer, og at
+vitenskapen dermed ikke behøver bruke induktive argumentasjon. Denne
+tankerekkefølgen gjør at man ikke kan stole på at noen ting vil være
+sant, eller ikke engang at det kan argumenteres for at det er sannsynlig
+å være sant. Dette er en av punktene som kritiseres av andre filosofer.
+Altså er det ikke mulig å si at noe er mer sant en annet. Popper
+kritiseres av andre av at det ikke er forskjell på godt bekreftede og
+dårlig bekreftede teorier. Det gjør også det mulig å sette opp nye
+teorier, eller endre teorier sånn at en teori ikke er falsifisert, da
+man ikke har noen form for hierarki over hvilke teorier som er best
+bekreftet. Et annet argument som ofte trekkes frem i denne sammenhengen
+er at det ikke trenger å være et klart skille mellom hva som er ekte
+vitenskap, og hva som er pseudo-vitenskap. Det vil i mine øyne ikke være
+så viktig da hvor godt noe er bevist eller bekreftet bør veie tyngre enn
+at det er formulert en hypotese som kan motsies. I mine øyne er en god
+vitenskapelig teori noe som er godt bekreftet. Et argument mot denne
+definisjonen på god vitenskapelig teori, er at den er en lite konkret og
+veldig vag definisjon, som er vanskelig å standardisere, og dermed
+dårlig i praksis. Denne definisjonen på en god teori, betyr at i praksis
+at teorien er bygget i bunn på induktive argumenter. Det er flere
+forskjellige metoder å benytte seg av induktiv argumentasjon, fire
+kjente måter er: Hypotetisk deduktiv metode, naiv induktivisme,
+abduksjon, og bayesianisme\
+4
+
+HD-metoden og abduksjon En av de som støttet induktiv argumentasjon for
+vitenskapelig teorier var Carl Hempel (1905- 1997), han var naturlig nok
+(delte nesten et helt århundre sammen, med motsatte meninger) en av
+Poppers kritikkere. Han kritiserte også naiv induktivisme, som baserte
+seg rundt to påstander. Den første er at en teori kan støttes induktivt
+når den kan trekkes ut fra et utvalg, og den andre er at teorien da bør
+formuleres etter at alle dataene er innsamlet. Hempel hang seg spesielt
+opp i det siste og mente at det var umulig å trekke noen konklusjoner
+før tidens slutt, da det alltid vil dukke opp nye data. Ei heller ville
+det være mulig å innhente all data som eksisterer i dag.(Hempel,1966,
+s.11.) Hempel var av en annen oppfatning av hvordan en teori kunne
+forklares eller bekreftes. Hempel mente dette var den hypotetsik
+deduktive metoden.\
+Den hypotetisk deduktive metoden baserer seg på fire steg. Det første
+steget er steget der det dannes eller formuleres en hypotese, teori etc.
+Dette steget gjøres ved hjelp av et «educated guess», eller «utdannet
+gjetning» som oversettelsen blir. Det neste steget er deduksjon, som i
+praksis betyr å utlede empiriske konsekvenser. Her legges grunnlaget for
+de neste to stegene da disse empiriske konsekvensene deduseres. I steg
+tre blir disse deduserte empiriske konsekvensene testet ut, som dirkete
+leder til steg fire. Hvis disse empiriske konsekvensene viser seg å være
+sanne er denne teorien induktivt bekreftet, eller induktivt styrket
+bekreftelse av teorien. (Hempel,1966, s.12-13). Den hypotetisk deduktive
+metoden kan forklares som en vei med to kjøreretninger, fra data til
+teori går det induktive argumentet, som er bygd på deduktivt argument
+som går motsatt vei, altså fra teori til data. Problemet knyttet til
+Hypotetisk deduktiv metode er at ikke alt kan deduseres, samt at enklere
+teorier kan passe like bra eller bedre. Om man følger Ockhams barberkniv
+ønsker man å skjære bort alt unødvendig, da den enkleste teorien som
+oftetst vil være rett. Abduksjon er en liknende modell til den
+hypotetsik deduktive metoden, men har et par vir og vendinger som gjør
+dem klart forskjellige allikevel. Abduksjon følger ordets rette
+betydning og betyr at man samler seg til eller slutter seg om, den beste
+teorien som forklarer et fenomen. Er det ingen annen teori som gir like
+god eller bedre forklaring, har teorien induktivt styrket bekreftelse
+eller er bekreftet. I Abduksjon vil enkelhet tas hensyn til og hvis tre
+teorier forklarer det samme fenomenet vil det enkleste induktivt
+bekreftes.
+
+5
+
+Replikasjonskrisen Et viktig punkt i vitenskapens unione søken mot et
+bedret kunnskapsbilde er åpenhet, det skal kunne testes av andre
+forskere at man får samme data fra samme forsøk. Dette er for å kunne
+styrke eller svekke et fenomens teori, og kanskje kunne oppdage en ny
+teori. For at dette skal kunne skje må forskningen være repliserbar.
+Dette er ikke vært gjennomført godt nok i de siste årene. Et økt fokus
+har gjort at det har kommet tall på problemene. 1576 forskere fikk
+spørsmål om det var en signifikant krise når det kommer til
+reproduserbarhet i forskning, i en undersøkelse for journalen Nature,
+der 52% av deltakerne var enige i det (Baker, 2016).\
+Forklaringen på hva som står bak denne krisen er bestående av en hel
+haug med små og store bidragsytende faktorer. Den minst beskuende og
+tillitsfulle forklaringen ligger i statistikken. Sånn at
+replikasjonskrisen kan være et produkt av to statstiske faktorer. De
+fleste hypoteser vi tester er usanne, og nivået for statistisk
+signinikans er for lavt (p=\<0,05). Det er tvilsomme
+forskningspraksiser, som f.eks tuklinger med data, p-hacking, fjerning
+av materiale. Det er mange små studier, som fører til lav statistisk
+styrke. Det publiseres ikke like ofte studier med kjedelige eller
+negative resultater (Bird, 2018). Det er også kraftig motivasjon for å
+få frem data med overraskende, eller nyttig resultat, som kan føre til
+at det blir gjort små ting som gjør at data ikke kan repliseres(Romero,
+2017).\
+For meg høres dette ut som et kombinert problem. Kanskje er verden sånn
+at vi ikke presterer den beste forskningen i ett frittstående
+konkurranse miljø. Det er enklere å få navnet opp og frem med noe
+kontroversielt enn med noe som støtter en allerede eksisterende teori. I
+det idrettsvitenskaplige fagfeltet er det ofte små utvalg i
+intervensjoner som gjennomføres, og med relativt kort varighet i forhold
+til adaptasjonene som skal måles på, som gjør at det krever at mye skal
+stemme for å få et signifikant resultat, som kan forsterke
+publikasjonsskjevheten, og dårlig forskningspraksis for å kunne få
+signifikante resultater.
