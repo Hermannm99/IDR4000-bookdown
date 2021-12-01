@@ -1,5 +1,5 @@
 ---
-title: "Oppgave 1"
+title: "Mappeeksamen"
 author: "Hermann Moen"
 date: "`r Sys.Date()`"
 output: pdf_document
@@ -7,6 +7,8 @@ documentclass: book
 bibliography: referanser.bib
 site: bookdown::bookdown_site
 ---
+
+# Reliabilitet
 
 ## Introduksjon
 
