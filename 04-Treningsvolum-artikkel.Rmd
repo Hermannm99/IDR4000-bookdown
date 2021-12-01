@@ -1,15 +1,173 @@
-# Footnotes and citations 
 
-## Footnotes
+# Høyere treningsvolum leder til bedre styke og muskelvekst i underekstremiteter hos utrente
 
-Footnotes are put inside the square brackets after a caret `^[]`. Like this one ^[This is a footnote.]. 
+## Introduksjon
 
-## Citations
+Styrketrening har en viktig rolle i samfunnet, og er anerkjent som en god metode til å forbedre muskelstyrke, evnen til kraftproduksjon, skape muskelhypertrofi, samt forbedre en rekke helsemarkører [@kraemer2002]. Derfor er kunnskap om hvordan man best tilrettelegger styrketrening for å opnå de ønskede adaptasjonene viktig. Styrketrening består av en rekke variabler som kan manipuleres ut ifra behov og gi ønsket adaptasjon [@kraemer2004; @bird2005]. Disse variablene som kan påvirke adaptasjoner er volum, frekvens, pauselengde, øvelsesutvalg, og øvelsesrekkefølge [@American2009].
 
-Reference items in your bibliography file(s) using `@key`.
+Treningsvolum og den tilknyttede dose-reponsen er således interesant for å øke effektiviteten av trening. De akutte responsene på forskjllige treningsvolum er undersøkt, og myofibrililær muskelproteinsyntesen ble signifikant økt når deltakere gjennomførte 3set på 70% av 1rm, vs 1 sett målt 5 og 29 timer etter trening [@burd2010]. Når det kommer til lengere varende intervensjonsstudier er det konflikt relatert til treningsvolumets påvirkning. Noen studier har vist signifikant bedre tilpassninger til høyere volum enn lavere volum [@rønnestad2007;@starkey1996;@radaelli2015 ]. Andre studier har vist at det ikke skiller seg i tilpassninger til styrketrening med forskjellig volum[@bottaro2011; @galvao2005;@mcbride2003]. Treningssadaptasjoner er avhengig av en rekke biologiske variabler. Målet med denne studien er å fjerne så mye biologisk påvirkning som mulig og undersøke effekten av volumet alene så godt som mulig.
 
-For example, we are using the **bookdown** package [@R-bookdown] (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and **knitr** [@xie2015] (this citation was added manually in an external file book.bib). 
-Note that the `.bib` files need to be listed in the index.Rmd with the YAML `bibliography` key.
+## Deltakere og studieoversikt
+
+Deltakerne i denne studien bestod av ikke røykende kvinner og menn mellom 18 og 40år. Deltakeren kunne ikke ha trent styrke oftere enn en gang per uke de siste 12 månedene, være inntolerante til lokalbeøvelse, ha en skade som påvirket muskelstyrke negativt, eller ta reseptbelagte legemidler som kan påvirke adaptasjonene til treningen. 7 deltakere som startet på studien kunne ikke gjennomføre tilstrekkelig, og ble ekskludert se tabel 1.
+
+I denne studiene ble deltakerne testet i pre og post for styrke, og forskjllige mål på muskelvekst.Testene for styrke var isokinetsik og isometrisk unilateral kneekstensjon, og unilateral beinpress. Målene for muskelvekst var tversnittsareal av vastus lateralis, medialis, intermedius, og rectus femoris målt med MRI, og måling av kroppsmassesammensetning gjort med DEXA-scan.
+
+## Databehandling
+
+All deskriptiv data er presntert som gjennomsnitt og Standard avvik gjennomsnitt(standard avvik). P-verdien er beregnet gjjenom en ANCOVA modell på endringen fra pre til post i de to gruppene. All databehandling er gjort i Rstudio.
+
+## Treningsprotokoll
+
+Treningsintervensjonen varte i 12 uker, og bestod av 2-3 ukentlige treningsøkter. Øktene var fullkropss styrkeøkter, der man gjennomførte ett sett på det ene beinet og flere sett på det andre beinet, samt alternerende overkroppsøvelser. Før øktene ble det gjennomført en standardisert oppvarming bestående av armhevinger, sit-ups, rygghev, og knebøy med kroppsvekt, sant 1 sett med 50% av 1RM for hver øvelse.
+
+Underkroppsøvelsene ble gjennomført i følgende rekkefølge: unilateral beinpress, kneekstensjon, og knefleksjon. Etter underksroppsøvelsene ble det gjort bilateral benkpress, nedtrekk, og enten skulderpress eller sittende roing(alternerende annenhver økt). Pauselengde var satt til å være mellom 90 og 180 sekunder. Det var 3 ukentlige økter. Intensiteten ble gradvis økt underveis i treningsintervensjon, 10RM uke 1-2, 8RM uke 3-5, og 7RM for de siste 7 ukene. 91%(10%) av treningsøktene ble gjennomført under oppsyn av forskningsmedarbeider, men de ble også bedt om å føre detaljert treningslogg for å ha full kontroll. Fra den 9ende treningsøkta ble det innført en økt med redusert belastning hver uke, som bestod av 90% av belastningen på den foregående treningsøkta, men med samme repetisjonsantall. Øktene ed maksimal innsats ble holdt med minst 48timers mellomrom, og de øktene med redusert intensitet ble holdt med inst 24 timers avstand fra de andre øktene
+
+## Testprotokoll
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide"}
+library(tidyverse)
+library(exscidata)
+library(knitr)
+library(kableExtra)
+library(flextable)
+dxadata %>% 
+  select(participant, time, sex, include:weight, fat.whole) %>% 
+ 
+  filter(time == "pre") %>%
+  
+  mutate(fat.whole = ((fat.whole/1000) / weight) * 100) %>%
+  
+ 
+  group_by(include, sex) %>%
+  mutate(n = n()) %>%
+ 
+  pivot_longer(names_to = "variable", 
+               values_to = "value", 
+               cols = age:n) %>%
+  
+  group_by(include, sex, variable) %>%
+  
+  summarise(m = mean(value), 
+            s = sd(value)) %>%
+  
+  mutate(ms = if_else(variable == "n", 
+                      as.character(m), 
+                        paste0(signif(m, 3),
+                        " (",
+                        signif(s, 3), 
+                        ")")), 
+         
+         include_sex = paste(include, sex, sep = "_")) %>%
+
+  ungroup() %>%
+
+  select(-sex, -include, -m, -s) %>%
+
+  pivot_wider(names_from = include_sex, 
+              values_from = ms) %>%
+    mutate(variable = factor(variable, levels = c("n", "age", "weight", "height", "fat.whole"), 
+                           labels = c("N", "Alder (år)", "Kroppsvekt (kg)", 
+                                      "Høyde (cm)", "Kroppsfett (%)"))) %>%
+  select(variable, incl_female, excl_female, incl_male, excl_male) %>%
+  arrange(variable) %>%
+   flextable()  %>%
+
+   set_header_labels(variable = "",
+                    incl_female = "Inkludert", 
+                     excl_female = "Ekskludert",
+                     incl_male = "Inkludert", 
+                     excl_male = "Ekskludert") %>%
+    
+    add_header_row(values = c("", "Kvinner", "Kvinner", "Menn", "Menn")) %>%
+    
+    
+    merge_at(part = "header", i = 1, j = 2:3) %>%
+    merge_at(part = "header", i = 1, j = 4:5) %>%
+  
+    add_footer_row(values = "Verdier er Gjennomsnitt og standard avvik", colwidths = 5) %>%
+  
+    autofit()
+```
+
+## Resultater
+
+sliter med å få disse figurene inn i PDF, og vurderer flere tester på datasettene.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", fig.cap = "Figur 1 viser økningen i muskelvekst fra pre- post for alle forsøkspersoner skildt ved single- sett og multiple- sett"}
+Endringscore_dxa_fig <- dxadata %>%  # Jsutere tabell for å gjøre utregning på variabler.
+  select(participant:include, lean.left_leg, lean.right_leg) %>%
+  pivot_longer(names_to = "leg", 
+               values_to = "lean.mass", 
+               cols = lean.left_leg:lean.right_leg) %>%
+   mutate(leg = if_else(leg == "lean.left_leg", "L", "R"), 
+         sets = if_else(multiple == leg, "multiple", "single")) %>%
+  select(participant, time, sets, sex, leg, lean.mass) %>%
+  group_by(participant) %>%
+  mutate(n = n(), group = factor(sets, levels = c("single", "multiple")), time = factor(time, levels = c("pre", "post")))
+Endringscore_dxa_fig %>%   # Lager figur på pre-post for hvert bein(treningsprotokoll)
+ ggplot(aes(time, lean.mass, group = paste(participant, group), color = group)) + geom_line() + theme_minimal()%>%
+print()
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, results="hide"}
+library(tidyverse)
+dat <- dxadata %>%
+  select(participant:include, lean.left_leg, lean.right_leg) %>%
+  pivot_longer(names_to = "leg", 
+               values_to = "lean.mass", 
+               cols = lean.left_leg:lean.right_leg) %>%
+  mutate(leg = if_else(leg == "lean.left_leg", "L", "R"), 
+         sets = if_else(multiple == leg, "multiple", "single")) %>%
+  select(participant, time, sets, sex, leg, lean.mass) %>%
+  
+  pivot_wider(names_from = time,
+              values_from = lean.mass) %>%
+  mutate(lbm.change = post - pre) %>%
+  mutate(pre.mc = pre - mean(pre)) %>% 
+  mutate(prosentvis.endring = ((post - pre) / pre) * 100) %>%
+  filter(!is.na(lbm.change)) 
+  
+  
+  
+dat %>%   
+  group_by(sets) %>%
+  summarise(m = mean(prosentvis.endring),
+            sd = sd(prosentvis.endring)) 
+library(lme4)
+library(lmerTest)
+m0 <- lm(post ~ pre + sex + sets, data = dat)
+summary(m0)
+plot(m0)
 
 
-The RStudio Visual Markdown Editor can also make it easier to insert citations: <https://rstudio.github.io/visual-markdown-editing/#/citations>
+
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, results="hide"}
+
+styrkedata <- strengthvolume %>%
+  filter(!is.na(load)) %>%
+  group_by(exercise) %>%
+  mutate(scaled.load = load / max(load, na.rm = TRUE)) %>%
+  group_by(participant, time, sex, sets) %>%
+  summarise(combined.load = mean(scaled.load, na.rm = TRUE)) %>%
+  ungroup() %>%
+  
+  
+  pivot_wider(names_from = time,
+              values_from = combined.load) %>%
+  mutate(prosentvis.endring = ((post - pre) / pre) * 100) 
+styrkedata %>%    
+  filter(!is.na(post)) %>%
+  group_by(sets) %>%
+  summarise(m = mean(prosentvis.endring),
+            sd = sd(prosentvis.endring)) 
+s0 <- lm(post ~ pre + sex + sets, data = styrkedata)
+summary(s0)
+plot(s0)
+```
+
+## Diskusjon
+
+Har ikke fått ut all data som er planlagt, klarer heller ikke beskrive helt sikkert hva testene som er kjørt viser, så dermed er det vrient å diskutere.

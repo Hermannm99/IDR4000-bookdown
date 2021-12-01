@@ -1,5 +1,5 @@
 delete_merged_file: true
-rmd_files: ["index.Rmd", "01-RNA-rapport.Rmd", "02-Filosofi-i-Vitenskap.Rmd", "03-study-designs.Rmd"] 
+rmd_files: ["index.Rmd", "01-RNA-rapport.Rmd", "02-Filosofi-i-Vitenskap.Rmd", "03-study-designs.Rmd","04-Treningsvolum-artikkel.Rmd" ] 
 language:
   ui:
     chapter_name: "Chapter "
