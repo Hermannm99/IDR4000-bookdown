@@ -20,7 +20,7 @@ Studiene som har undersøkt høyere frekvenser opp mot hverandre [@johnsen2021; 
 
 ## Hvilke forskjeller er det i de metodiske valgene i studiene?
 
-Alle disse studiene har en lik type design. Den ekspermientielle tilnærmingen baserer seg på to randomiserte grupper, som følger to forskjellige forutbestemte protokoller for å se om det gir utslag på pre til post test resultater. Randomiserte kontrolerte forsøk gjøres for å undersøke en bestemt variabel, og er en streng rigid metode for å finne årask-virkning mellom variabelen og utfallet [@sibbald1998]. Treningsfrekvensen er variabelen som undersøkes i disse studiene, og basert på tidligere forskning må de ha et likt totalt treningsvolum i begge gruppene, for å kunne undersøke effekten av frekvensen best mulig. Det som varierer i disse studienes metoder er varighet på intervensjon, testmetoder, antall deltakere, frekvens som nevnt tidligere og til en viss grad hvilket samfunns segment forsøkspersonene tilhører.
+Alle disse studiene har en lik type design. Studiene som undersøkes kalles longituelle studier. Den ekspermientielle tilnærmingen baserer seg på to randomiserte grupper, som følger to forskjellige forutbestemte protokoller for å se om det gir utslag på pre til post test resultater. Randomiserte kontrolerte forsøk som dette kalles, gjøres for å undersøke en bestemt variabel, og er en streng rigid metode for å finne årask-virkning mellom variabelen og utfallet [@sibbald1998]. Treningsfrekvensen er variabelen som undersøkes i disse studiene, og basert på tidligere forskning må de ha et likt totalt treningsvolum i begge gruppene, for å kunne undersøke effekten av frekvensen best mulig. Det som varierer i disse studienes metoder er varighet på intervensjon, testmetoder, antall deltakere, frekvens som nevnt tidligere og til en viss grad hvilket samfunns segment forsøkspersonene tilhører.
 
 Alle studiene har beskrivende data på sin deltaker masse. [@saric2019] sin studie hadde en deltaker masse bestående av 30 styrketrente menn, (gjennomsnitt+Standardavvik) alder = 22.6 +- 2.1 år, høyde = 183,1+-6,0cm, og kroppsvekt = 87,2+-11,6kg. Denne studien hadde en treningsintervensjon med varighet på 6 uker, og undersøkte muskelstyrke ved hjelp av 1RM, muskulær utholdenhet med RM på 60% av 1RM, og muskeltykkelse ved hjelp av ultralyd [\@saric2019]. De samme testene pre og post ble gjort i studien til [@brigatto2019], men som testet lavere frekvenser mot hverandre, og med en lengere intervensjon. Disse studiene undersøkte begge frekvens på styrketrente menn, men med såpass store metodiske variasjoner at hypotesene er forskjellige.
 
@@ -28,7 +28,7 @@ I alle studiene brukes det flere forskjellige statistiske tester. Frekventiske t
 
 Alle de evaluerte studiene har også beregnet effekt størrelse fra pre-post test resultatene [@brigatto2019; @gentil2018; @johnsen2021; @saric2019; @lasevicius2019].
 
-## **Resultater og konklusjon**
+## **Resultater og konklusjon** 
 
 I alle studiene besvares hypotesen, men det presiseres også at det trengs mer forskning på området for å kunne konkludere. Det gis også forklaringer på svakheter i studiene som for eksempel små utvalg, og kort varighet. Disse studiene viser også at den metodiske utformingen er viktig da frekvensens påvirkning kan gi signifikant p-verdi i en type studie, med lavere frekvenser som sammenliknes, men ikke i andre. Derfor er også konklusjonene litt forskjellige, og gjelder kun for frekvensene som sammenliknes, og ikke treningsfrekvens generelt [@johnsen2021; @brigatto2019; @gentil2018; @saric2019; @lasevicius2019].
 
