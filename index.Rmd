@@ -62,7 +62,7 @@ vo2data %>%
 ```
 
 ```{r Realabilitet, echo=FALSE, message=FALSE, warning=FALSE}
-reliabilitet <- read_excel("data/realabilitet uttrekning.xlsx") %>%
+reliabilitet <- read_excel("data/realabilitet-uttrekning.xlsx") %>%
   mutate(diff = `VO2_max_ml/min post` - `VO2_max_ml/min pre`) %>% # Change/difference score
   summarise(s = sd(diff),
             m = mean(c(`VO2_max_ml/min post`, `VO2_max_ml/min pre`)), # mean
