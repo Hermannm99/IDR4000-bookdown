@@ -36,7 +36,7 @@ library(ggtext)
 library(ggplot2)
 vo2data <- read_excel("data/vo2g1.xlsx")
 vo2data %>%
-  select(fp, time, sex, age, height, weight) %>% 
+  dplyr::select(fp, time, sex, age, height, weight) %>% 
   # Velger fp, time, sex, age, height and weight
   
   filter(time == "pre") %>% # filter for å bare ha resulat fra pre
@@ -51,7 +51,7 @@ vo2data %>%
             s = sd(value)) %>% # regner ut gjennomnsitt og sdandardavvik og legger til som kolonne
   mutate(ms = if_else(variable == "n", as.character(m), paste0(signif(m, 3),  " (", signif(s, 3), ")"))) %>% # formaterer det på gunstig måte og bruker signif til å runde av desiamler.
    ungroup() %>% # må til for å fjerne kolonner
-  select(-m, -s) %>% # Velger de jeg skal fjerne
+  dplyr::select(-m, -s) %>% # Velger de jeg skal fjerne
    pivot_wider(names_from = sex, 
               values_from = ms) %>% # Henter navn fra sex og verdier fra values og danner en bredere tabell
    mutate(variable = factor(variable, levels = c("n", "age", "weight", "height"), labels = c("N", "Alder (år)", "Vekt (kg)", "Høyde (cm)"))) %>% # Endrer navn på variabler 
@@ -79,7 +79,7 @@ Deskriptive data for disse deltakerne er vist i Tabell 1, i Figur 1 kan man se f
 
 ```{r Figur, echo=FALSE, message=FALSE, warning=FALSE, fig.cap = "Figuren viser forskjellen i VO2max(ml/min) i test 1 og test 2"}
 read_excel("data/vo2g1.xlsx") %>%
-  select(fp, time, vo2data = `VO2_max_ml/min`, sex)  %>%
+  dplyr::select(fp, time, vo2data = `VO2_max_ml/min`, sex)  %>%
   mutate(time = factor(time, levels = c("pre", "post"), 
                            labels = c("Test 1", "Test 2"))) %>%
   mutate(sex = factor(sex, levels =c("F", "M"),

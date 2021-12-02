@@ -17,7 +17,7 @@ library(knitr)
 library(kableExtra)
 library(flextable)
 dxadata %>% 
-  select(participant, time, sex, include:weight, fat.whole) %>% 
+  dplyr::select(participant, time, sex, include:weight, fat.whole) %>% 
  
   filter(time == "pre") %>%
   
@@ -47,14 +47,14 @@ dxadata %>%
 
   ungroup() %>%
 
-  select(-sex, -include, -m, -s) %>%
+  dplyr::select(-sex, -include, -m, -s) %>%
 
   pivot_wider(names_from = include_sex, 
               values_from = ms) %>%
     mutate(variable = factor(variable, levels = c("n", "age", "weight", "height", "fat.whole"), 
                            labels = c("N", "Alder (år)", "Kroppsvekt (kg)", 
                                       "Høyde (cm)", "Kroppsfett (%)"))) %>%
-  select(variable, incl_female, excl_female, incl_male, excl_male) %>%
+  dplyr::select(variable, incl_female, excl_female, incl_male, excl_male) %>%
   arrange(variable) %>%
    flextable()  %>%
 
@@ -117,14 +117,14 @@ data("strengthvolume")
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, results="hide"}
 library(tidyverse)
 dat <- dxadata %>%  # Justere tabell for utregningner
-  select(participant:include, lean.left_leg, lean.right_leg) %>%
+  dplyr::select(participant:include, lean.left_leg, lean.right_leg) %>%
   pivot_longer(names_to = "leg", 
                values_to = "lean.mass", 
                cols = lean.left_leg:lean.right_leg) %>%
   #Endre variabel
   mutate(leg = if_else(leg == "lean.left_leg", "L", "R"), 
          sets = if_else(multiple == leg, "multiple", "single")) %>%
-  select(participant, time, sets, sex, leg, lean.mass) %>%
+  dplyr::select(participant, time, sets, sex, leg, lean.mass) %>%
   
   #for å regne ut prosentvis endring
   pivot_wider(names_from = time, 
@@ -165,13 +165,13 @@ labs(x = "Treningsprotokoll",
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, results="hide", fig.cap = "Figur 1 viser økningen i muskelvekst fra pre- post for alle forsøkspersoner skildt ved single- sett og multiple- sett"}
 modeldat <- dxadata %>%  
-  select(participant:include, lean.left_leg, lean.right_leg) %>%
+  dplyr::select(participant:include, lean.left_leg, lean.right_leg) %>%
   pivot_longer(names_to = "leg", 
                values_to = "lean.mass", 
                cols = lean.left_leg:lean.right_leg) %>%
    mutate(leg = if_else(leg == "lean.left_leg", "L", "R"), 
          sets = if_else(multiple == leg, "multiple", "single")) %>%
-  select(participant, time, sets, sex, leg, lean.mass) %>%
+  dplyr::select(participant, time, sets, sex, leg, lean.mass) %>%
   group_by(participant) %>%
   mutate(n = n(), group = factor(sets, levels = c("single", "multiple")), time = factor(time, levels = c("pre", "post")))
 modeldat %>%   

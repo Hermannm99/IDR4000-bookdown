@@ -32,14 +32,14 @@ library(qpcrpal)
 library(tidyverse)
 ```
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, warning=FALSE}
 group1 <- read_quant5("./data/qpcr/IDR4000-Group1-precision.xls", skip = 47) %>%
   mutate(ID = paste0(Well, "_", ID))
 models <- model_qpcr(group1)
 results_group1 <- analyze_models(models)
 ```
 
-```{r, echo = FALSE, fig.caption = "Figur 1: Figuren viser sammenhengen mellom antall PCR-sykluser og fluorescence "}
+```{r, echo = FALSE, warning=FALSE, fig.caption = "Figur 1: Figuren viser sammenhengen mellom antall PCR-sykluser og fluorescence "}
 data.frame(predict(models[[1]]), cycle = 1:40) %>%
   ggplot(aes(cycle, Prediction)) +
   geom_line() +
@@ -62,7 +62,7 @@ data.frame(predict(models[[1]]), cycle = 1:40) %>%
 
 Modellen viser sammenhengen mellom antall sykluser og fluorescence. Flere PCR-sykluser gir flere kopier, og dermed også en økt konsentrasjon i prøven. På denne måten kan vi bruke fluorescence til å si noe om hvor mange sykluser som må til for å oppnå en bestemt terskelverdi(Cq-verdi). Med primerne vi benyttet i forsøket var det ønskelig med et sted mellom 10 og 40 sykluser for å sikre at vi oppnådde terskelverdien. Det ble derfor kjørt 40 sykluser.Ved flere sykluser øker trolig sannsynligheten for falske positive.
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, Warning=FALSE}
 #hvordan mengden av kopiert RNA utvikler seg med antall PCR-sykluser/Cq verdier??
 cyc.diff <- 3.327
 dat <- data.frame(concentration = c(1, 1/10, 1/100, 1/1000, 1/10000, 1/100000), 
@@ -148,7 +148,7 @@ saveRDS(efficiency_est_data, "./data/qpcr/efficiency-estimate-data.RDS")
    theme_bw()
 ```
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, Warning=FALSE}
  # Create models and extract the second coefficient from each model (the slope)
 b2m_slope <- coef(lm(cq ~ log10(concentration), data = filter(efficiency_est_data, target == "B2M")))[2]
 reep5_slope <- coef(lm(cq ~ log10(concentration), data = filter(efficiency_est_data, target == "REEP5")))[2]
@@ -171,8 +171,7 @@ fc_g1 <- results_group1 %>%
   group_by(sample)%>%
   pivot_wider(names_from = target, values_from = cq) %>%
   arrange(time) %>%
-   flextable() %>%
-  print()
+   flextable()
 ```
 
 ## Diskusjon
