@@ -41,46 +41,6 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -264,48 +224,6 @@ Det ble derreter laget sju forskjellige master mixer ved hjelp av 3 referansegen
 
 En PCR protokoll ble på forhånd forberedet i QuantStudio5. PCR protokollen bestod av 50 grader i 2 minutter, og 95 grader i 2 minutter, før den kjørte 40 sykluser bestående av 1 sekund på 95 grader celsius, og 30 sekunder på 60 grader celsius.
 
-\begin{verbatim}
-## Loading required package: MASS
-\end{verbatim}
-
-\begin{verbatim}
-## 
-## Attaching package: 'MASS'
-\end{verbatim}
-
-\begin{verbatim}
-## The following object is masked from 'package:dplyr':
-## 
-##     select
-\end{verbatim}
-
-\begin{verbatim}
-## Loading required package: minpack.lm
-\end{verbatim}
-
-\begin{verbatim}
-## Loading required package: rgl
-\end{verbatim}
-
-\begin{verbatim}
-## Loading required package: robustbase
-\end{verbatim}
-
-\begin{verbatim}
-## Loading required package: Matrix
-\end{verbatim}
-
-\begin{verbatim}
-## 
-## Attaching package: 'Matrix'
-\end{verbatim}
-
-\begin{verbatim}
-## The following objects are masked from 'package:tidyr':
-## 
-##     expand, pack, unpack
-\end{verbatim}
-
 \includegraphics{_main_files/figure-latex/unnamed-chunk-3-1.pdf}
 
 \hypertarget{resultater-2}{%
@@ -313,39 +231,13 @@ En PCR protokoll ble på forhånd forberedet i QuantStudio5. PCR protokollen bes
 
 Modellen viser sammenhengen mellom antall sykluser og fluorescence. Flere PCR-sykluser gir flere kopier, og dermed også en økt konsentrasjon i prøven. På denne måten kan vi bruke fluorescence til å si noe om hvor mange sykluser som må til for å oppnå en bestemt terskelverdi(Cq-verdi). Med primerne vi benyttet i forsøket var det ønskelig med et sted mellom 10 og 40 sykluser for å sikre at vi oppnådde terskelverdien. Det ble derfor kjørt 40 sykluser.Ved flere sykluser øker trolig sannsynligheten for falske positive.
 
-\begin{verbatim}
-## `geom_smooth()` using formula 'y ~ x'
-\end{verbatim}
-
 \includegraphics{_main_files/figure-latex/unnamed-chunk-4-1.pdf}
-
-\begin{verbatim}
-## `geom_smooth()` using formula 'y ~ x'
-\end{verbatim}
 
 \begin{figure}
 \centering
 \includegraphics{_main_files/figure-latex/unnamed-chunk-5-1.pdf}
 \caption{\label{fig:unnamed-chunk-5}Efficiency calculations made from serial dilution of cDNA}
 \end{figure}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\DocumentationTok{\#\# Estimerte cq verdier? }
-\FunctionTok{library}\NormalTok{(flextable)}
-\NormalTok{fc\_g1 }\OtherTok{\textless{}{-}}\NormalTok{ results\_group1 }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{separate}\NormalTok{(ID, }\AttributeTok{into =} \FunctionTok{c}\NormalTok{(}\StringTok{"well"}\NormalTok{, }\StringTok{"sample"}\NormalTok{, }\StringTok{"subsample"}\NormalTok{, }\StringTok{"time"}\NormalTok{, }\StringTok{"target"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
-\NormalTok{  dplyr}\SpecialCharTok{::}\FunctionTok{select}\NormalTok{(well}\SpecialCharTok{:}\NormalTok{target, }\AttributeTok{cq =}\NormalTok{ cpD2) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{filter}\NormalTok{(sample }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"FP1"}\NormalTok{, }\StringTok{"FP2"}\NormalTok{, }\StringTok{"FP3"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
-\NormalTok{  dplyr}\SpecialCharTok{::}\FunctionTok{select}\NormalTok{(sample, time, target, cq) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{target =} \FunctionTok{toupper}\NormalTok{(target), }
-         \AttributeTok{target =} \FunctionTok{gsub}\NormalTok{(}\StringTok{"RRNA475"}\NormalTok{, }\StringTok{"RRNA47S"}\NormalTok{, target)) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{group\_by}\NormalTok{(sample)}\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{pivot\_wider}\NormalTok{(}\AttributeTok{names\_from =}\NormalTok{ target, }\AttributeTok{values\_from =}\NormalTok{ cq) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{arrange}\NormalTok{(time) }\SpecialCharTok{\%\textgreater{}\%}
-   \FunctionTok{flextable}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
 
 \hypertarget{diskusjon-1}{%
 \section{Diskusjon}\label{diskusjon-1}}
@@ -443,7 +335,7 @@ Treningsvolum og den tilknyttede dose-reponsen er således interesant for å øk
 \hypertarget{deltakere-og-studieoversikt}{%
 \section{Deltakere og studieoversikt}\label{deltakere-og-studieoversikt}}
 
-Deltakerne i denne studien bestod av ikke røykende kvinner og menn mellom 18 og 40år. Deltakeren kunne ikke ha trent styrke oftere enn en gang per uke de siste 12 månedene, ikke være inntolerante til lokalbeøvelse, ha en skade som påvirket muskelstyrke negativt, eller ta reseptbelagte legemidler som kan påvirke adaptasjonene til treningen. 7 deltakere som startet på studien kunne ikke gjennomføre tilstrekkelig, og ble ekskludert se tabel 1.
+Deltakerne i denne studien bestod av ikke røykende kvinner og menn mellom 18 og 40år. Deltakeren kunne ikke ha trent styrke oftere enn en gang per uke de siste 12 månedene, ikke være inntolerante til lokalbeøvelse, ha en skade som påvirket muskelstyrke negativt, eller ta reseptbelagte legemidler som kan påvirke adaptasjonene til treningen. 7 deltakere som startet på studien kunne ikke gjennomføre tilstrekkelig, og ble ekskludert se tabell 2.
 
 \providecommand{\docline}[3]{\noalign{\global\setlength{\arrayrulewidth}{#1}}\arrayrulecolor[HTML]{#2}\cline{#3}}
 
@@ -453,7 +345,7 @@ Deltakerne i denne studien bestod av ikke røykende kvinner og menn mellom 18 og
 
 \begin{longtable}[c]{|p{1.36in}|p{1.02in}|p{1.02in}|p{1.02in}|p{1.02in}}
 
-
+\caption{ Deltakeroversikt}\label{tab:unnamed-chunk-7}\\
 
 \hhline{>{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}-}
 

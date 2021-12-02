@@ -1,13 +1,12 @@
 ---
 title: "Mappeeksamen"
-author: "Hermann Moen"
+author: "Hermann Moen Kanditatnr.: 111"
 date: "`r Sys.Date()`"
 output: pdf_document
 documentclass: book
 bibliography: referanser.bib
 site: bookdown::bookdown_site
 ---
-
 # Realabilitet
 
 ## Introduksjon
@@ -62,8 +61,6 @@ vo2data %>%
   add_footer_row(values = "Verdier er gitt som gjennomsnitt og (Standardavvik)", colwidths = 3) %>%
    autofit()
 ```
-
-## Resultater
 
 ```{r Realabilitet, echo=FALSE, message=FALSE, warning=FALSE}
 reliabilitet <- read_excel("data/realabilitet-uttrekning.xlsx") %>%
