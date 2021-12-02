@@ -72,7 +72,7 @@ reliabilitet <- read_excel("data/realabilitet-uttrekning.xlsx") %>%
              L = qt(0.975, 4) * s)  # Calculate as a percentage of the mean
 ```
 
-Deskriptive data for disse deltakerne er vist i Tabell 1, i Figur 1 kan man se forskjellen mellom test 1o og 2 fordelt på kjønn. Det typiske målefeilet (typical error, [@hopkins2000]) fra test 1 til test 2 er utregnet til å være `r round(reliabilitet$cv, 2)`%.
+Deskriptive data for disse deltakerne er vist i Tabell 1.1, i Figur 1 kan man se forskjellen mellom test 1o og 2 fordelt på kjønn. Det typiske målefeilet (typical error, [@hopkins2000]) fra test 1 til test 2 er utregnet til å være `r round(reliabilitet$cv, 2)`%.
 
 ```{r Figur, echo=FALSE, message=FALSE, warning=FALSE, fig.cap = "Figuren viser forskjellen i VO2max(ml/min) i test 1 og test 2"}
 read_excel("data/vo2g1.xlsx") %>%

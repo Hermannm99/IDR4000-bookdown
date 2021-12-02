@@ -8,7 +8,7 @@ Treningsvolum og den tilknyttede dose-reponsen er således interesant for å øk
 
 ## Deltakere og studieoversikt
 
-Deltakerne i denne studien bestod av ikke røykende kvinner og menn mellom 18 og 40år. Deltakeren kunne ikke ha trent styrke oftere enn en gang per uke de siste 12 månedene, ikke være inntolerante til lokalbeøvelse, ha en skade som påvirket muskelstyrke negativt, eller ta reseptbelagte legemidler som kan påvirke adaptasjonene til treningen. 7 deltakere som startet på studien kunne ikke gjennomføre tilstrekkelig, og ble ekskludert se tabell 2.
+Deltakerne i denne studien bestod av ikke røykende kvinner og menn mellom 18 og 40år. Deltakeren kunne ikke ha trent styrke oftere enn en gang per uke de siste 12 månedene, ikke være inntolerante til lokalbeøvelse, ha en skade som påvirket muskelstyrke negativt, eller ta reseptbelagte legemidler som kan påvirke adaptasjonene til treningen. 7 deltakere som startet på studien kunne ikke gjennomføre tilstrekkelig, og ble ekskludert (se tabell 5.1).
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="asis", tab.cap= " Deltakeroversikt"}
 library(tidyverse)
