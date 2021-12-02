@@ -262,8 +262,10 @@ styrkemodell %>% # Lager en figur pre- post per gruppe
 
 ## Diskusjon
 
+Hovedfunnene i denne studien er at høyere volum gir bedre effekt enn lavere volum for muskelstyrke, og samsvarer bra med tidligere studier med liknende treningsprotokoller [@rønnestad2007;@starkey1996;@radaelli2015]. Endringer i muskelstyrke er vist i en metaanalyse bestående av 61 randomiserte kontrolerte studier, med varighet på minimum 4uker å ha et gradert dose-respons forhold [@Ralston2017].
+
+I denne studien får deltakerne trent i snitt 15,6 sett per muskelgruppe i låret(quadriceps, og hamstrings) per uke på beinet som trener flere sett per øvelse, og 5,2 sett på beinet som trente ett sett per øvelse. Dermed kunne man kanskje tenke seg at det også ville skille signifikant mellom protokollene i endringene av mager masse, som vist i en matanalyse der de fant at hvert ekstra sett ledet til 0,36% bedre adaptasjoner[@schoenfeld2016]. Det er derfor viktig å huske at deltakerne her er utrente, og resultatene av ett sett kan være velig gode, og gi ikke signifikante forskjeller[@bottaro2011; @galvao2005; @mcbride2003]. Det kunne derfor vært interresant å se på godt trente personer gjennomføre nøyaktig samme protokoll, og gi mere konkret evidens til å si noe om et gradert dose respons forhold.
+
 ### Konklusjon
 
-Totalt sett viste denne studien at multiple- sett ga en bedre økning i muskelstyrke sammenlignet med single- sett. Selv om begge gruppene hadde økning vil det kunne være mer hensiktsmessig å trene styrketrening med multiple- sett.
-
-Har ikke fått ut all data som er planlagt, klarer heller ikke beskrive helt sikkert hva testene som er kjørt viser, så dermed er det vrient å diskutere.
+I denne studien ser vi at det er mest effektivt å trene med høyere treningsvolum for styrke i underkroppen, men at det ikke er nødvendig for muskelveksten. Det kan tenkes at for å oprettholde denne utviklingen, må etterhvert treningsvolumet økes fra singel-sett protokollen til noe liknende flere.-sett protokollen følger, basert på det graderte doserespons forholdet.
