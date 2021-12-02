@@ -264,27 +264,6 @@ Det ble derreter laget sju forskjellige master mixer ved hjelp av 3 referansegen
 
 En PCR protokoll ble på forhånd forberedet i QuantStudio5. PCR protokollen bestod av 50 grader i 2 minutter, og 95 grader i 2 minutter, før den kjørte 40 sykluser bestående av 1 sekund på 95 grader celsius, og 30 sekunder på 60 grader celsius.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\ControlFlowTok{if}\NormalTok{(}\StringTok{"qpcR"} \SpecialCharTok{\%in\%} \FunctionTok{rownames}\NormalTok{(}\FunctionTok{installed.packages}\NormalTok{()) }\SpecialCharTok{==} \ConstantTok{FALSE}\NormalTok{) }\FunctionTok{install.packages}\NormalTok{(}\StringTok{"qpcR"}\NormalTok{)}
-\ControlFlowTok{if}\NormalTok{(}\StringTok{"readxl"} \SpecialCharTok{\%in\%} \FunctionTok{rownames}\NormalTok{(}\FunctionTok{installed.packages}\NormalTok{()) }\SpecialCharTok{==} \ConstantTok{FALSE}\NormalTok{) }\FunctionTok{install.packages}\NormalTok{(}\StringTok{"readxl"}\NormalTok{)}
-\ControlFlowTok{if}\NormalTok{(}\StringTok{"parallel"} \SpecialCharTok{\%in\%} \FunctionTok{rownames}\NormalTok{(}\FunctionTok{installed.packages}\NormalTok{()) }\SpecialCharTok{==} \ConstantTok{FALSE}\NormalTok{) }\FunctionTok{install.packages}\NormalTok{(}\StringTok{"parallel"}\NormalTok{)}
-\CommentTok{\# Check if qpcrpal is installed, otherwise install}
-\ControlFlowTok{if}\NormalTok{(}\StringTok{"qpcrpal"} \SpecialCharTok{\%in\%} \FunctionTok{rownames}\NormalTok{(}\FunctionTok{installed.packages}\NormalTok{()) }\SpecialCharTok{==} \ConstantTok{FALSE}\NormalTok{) \{}
-  
-  \FunctionTok{library}\NormalTok{(remotes)}
-\NormalTok{  remotes}\SpecialCharTok{::}\FunctionTok{install\_github}\NormalTok{(}\StringTok{"dhammarstrom/qpcrpal"}\NormalTok{, }\AttributeTok{build\_vignettes =} \ConstantTok{TRUE}\NormalTok{)}
-  
-\NormalTok{\}}
-\CommentTok{\# Load packages}
-\FunctionTok{library}\NormalTok{(qpcR)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'qpcR' was built under R version 4.1.2
-\end{verbatim}
-
 \begin{verbatim}
 ## Loading required package: MASS
 \end{verbatim}
@@ -305,23 +284,11 @@ En PCR protokoll ble på forhånd forberedet i QuantStudio5. PCR protokollen bes
 \end{verbatim}
 
 \begin{verbatim}
-## Warning: package 'minpack.lm' was built under R version 4.1.2
-\end{verbatim}
-
-\begin{verbatim}
 ## Loading required package: rgl
 \end{verbatim}
 
 \begin{verbatim}
-## Warning: package 'rgl' was built under R version 4.1.2
-\end{verbatim}
-
-\begin{verbatim}
 ## Loading required package: robustbase
-\end{verbatim}
-
-\begin{verbatim}
-## Warning: package 'robustbase' was built under R version 4.1.2
 \end{verbatim}
 
 \begin{verbatim}
@@ -338,15 +305,6 @@ En PCR protokoll ble på forhånd forberedet i QuantStudio5. PCR protokollen bes
 ## 
 ##     expand, pack, unpack
 \end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(readxl)}
-\FunctionTok{library}\NormalTok{(parallel)}
-\FunctionTok{library}\NormalTok{(qpcrpal)}
-\FunctionTok{library}\NormalTok{(tidyverse)}
-\end{Highlighting}
-\end{Shaded}
 
 \includegraphics{_main_files/figure-latex/unnamed-chunk-3-1.pdf}
 
@@ -389,11 +347,6 @@ Modellen viser sammenhengen mellom antall sykluser og fluorescence. Flere PCR-sy
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## Warning: Expected 5 pieces. Additional pieces discarded in 70 rows [1, 2, 3, 4,
-## 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, ...].
-\end{verbatim}
-
 \hypertarget{diskusjon-1}{%
 \section{Diskusjon}\label{diskusjon-1}}
 
@@ -405,7 +358,7 @@ Cq-verdien sier noe om hvor mange PCR-sykluser som trengs for å detektere ulike
 \hypertarget{falsifikasjon}{%
 \section{Falsifikasjon}\label{falsifikasjon}}
 
-Falsifiseringsprinsippet Karl Raimund Popper (1902-1994), var en Østerisk-Britisk filosof. Popper hadde siden høsten 1919 bearbeidet spørsmålet om hva som skulle til for å kunne dannet et skille mellom vitenskap og pseudo-vitenskap. På den tiden(starten av og et stykke inn på 1900tallet) var det en aksept for at skilnaden mellom vitenskap og pseudo-vitenskap, var den empiriske fremgangsmetoden \citep{popper2002}. Den empiriske fremgangsmetoden går fra observasjoner, eller eksperimenter til å danne teorier ved hjelp av induktive argumenter. Et induktivt argument bygger på at premissene som er satt er sanne, og ved nok observasjoner av disse premissene, vil konklusjonen sannsynligvis være sann, eller man kan si at man har styrket bekreftelse av en teori. Denne tankerekkefølgen ble kritisert av David Hume (1711- 1776) allerede på 1700tallet. Hume stilte spørsmål for hvordan man kan slå fast at induksjon er pålitelig, og svaret ble ved hjelp av et argument. Hvilket argument skulle brukes? Induktiv metode kan ikke garanteres for ved et deduktivt argument, da det ikke finnes et deduktivt argument for fremtiden. Et induktivt argument bygger på erfaringer, men kan heller ikke slå fast induksjonens sikkerhet. Dette var kronglete å holde styr på i hodet, men var et fundamentet i kritikken av induksjonismen langt inn på 1900tallet.
+Falsifiseringsprinsippet Karl Raimund Popper (1902-1994), var en Østerisk-Britisk filosof. Popper hadde siden høsten 1919 bearbeidet spørsmålet om hva som skulle til for å kunne dannet et skille mellom vitenskap og pseudo-vitenskap. På den tiden(starten av og et stykke inn på 1900tallet) var det en aksept for at skilnaden mellom vitenskap og pseudo-vitenskap, var den empiriske fremgangsmetoden \citep{popper2002}. Den empiriske fremgangsmetoden går fra observasjoner, eller eksperimenter til å danne teorier ved hjelp av induktive argumenter. Et induktivt argument bygger på at premissene som er satt er sanne, og ved nok observasjoner av disse premissene, vil konklusjonen sannsynligvis være sann, eller man kan si at man har styrket bekreftelse av en teori. Denne tankerekkefølgen ble kritisert av David Hume (1711- 1776) allerede på 1700tallet. Hume stilte spørsmål for hvordan man kan slå fast at induksjon er pålitelig, og svaret ble ved hjelp av et argument. Hvilket argument skulle brukes? Induktiv metode kan ikke garanteres for ved et deduktivt argument, da det ikke finnes et deduktivt argument for at induksjon vil fungere i fremtiden. Et induktivt argument bygger på erfaringer, men kan heller ikke slå fast induksjonens sikkerhet. Dette var kronglete å holde styr på i hodet, men var et fundamentet i kritikken av induksjonismen langt inn på 1900tallet.
 
 Popper som i utgangspunktet var ute etter å skille vitenskap fra pseudo-vitenskap viste om denne svakheten ved induktive argumenter som var det som var det opprinnelige skille. Ved hjelp av datidens største og mest fremgangsrike vitenskapsteorier lette Popper etter forskjeller. Einsteins relativitetsteori, marx historiske teorier, Freuds psyko-analyser, og Alfred Adlers individuelle psykologi var de mest omtalte teoriene på den tiden. Når han etter hvert oppdaget at flere av punktene i de forskjllige teoriene ble bekreftet, ble han også mens tiden gikk mindre og mindre imponert av Marx, Freud og Adler. Det var her han startet å se etter forskjeller. De andre teoriene hadde mange bekreftelser, og hvert eneste tilfelle kunne på en eller annen måte forklares ved hjelp av teoriene. Einsteins relativitetsteori kunne derimot motsies ved hjelp av en eksakt måling. Ut av dette vokste Poppers falsifiserbarhetskriterium \citep{popper2002}.
 
@@ -416,17 +369,21 @@ Dette er en av punktene som kritiseres av andre filosofer. Altså er det ikke mu
 \hypertarget{hd-metoden-og-abduksjon}{%
 \section{HD-metoden og abduksjon}\label{hd-metoden-og-abduksjon}}
 
-En av de som støttet induktiv argumentasjon for vitenskapelig teorier var Carl Hempel (1905- 1997), han var naturlig nok (delte nesten et helt århundre sammen, med motsatte meninger) en av Poppers kritikkere. Han kritiserte også naiv induktivisme, som baserte seg rundt to påstander. Den første er at en teori kan støttes induktivt når den kan trekkes ut fra et utvalg, og den andre er at teorien da bør formuleres etter at alle dataene er innsamlet. Hempel hang seg spesielt opp i det siste og mente at det var umulig å trekke noen konklusjoner før tidens slutt, da det alltid vil dukke opp nye data. Ei heller ville det være mulig å innhente all data som eksisterer i dag. \citep[s. 11]{hempel1966} Hempel var av en annen oppfatning av hvordan en teori kunne forklares eller bekreftes. Hempel mente dette var den hypotetsik deduktive metoden.\\
+En av de som støttet induktiv argumentasjon for vitenskapelig teorier var Carl Hempel (1905- 1997), han var naturlig nok (delte nesten et helt århundre sammen, med motsatte meninger) en av Poppers kritikkere. Han kritiserte også naiv induktivisme, som baserte seg rundt to påstander. Den første er at en teori kan støttes induktivt når den kan trekkes ut fra et utvalg, og den andre er at teorien da bør formuleres etter at alle dataene er innsamlet. Hempel hang seg spesielt opp i det siste og mente at det var umulig å trekke noen konklusjoner før tidens slutt, da det alltid vil dukke opp nye data. Ei heller ville det være mulig å innhente all data som eksisterer i dag. \citep[s. 11]{hempel1966} Hempel var av en annen oppfatning av hvordan en teori kunne bekreftes. Hempel mente dette var den hypotetsik deduktive metoden.\\
 
 Den hypotetisk deduktive metoden baserer seg på fire steg. Det første steget er steget der det dannes eller formuleres en hypotese, teori etc. Dette steget gjøres ved hjelp av et «educated guess», eller «utdannet gjetning» som oversettelsen blir. Det neste steget er deduksjon, som i praksis betyr å utlede empiriske konsekvenser. Her legges grunnlaget for de neste to stegene da disse empiriske konsekvensene deduseres. I steg tre blir disse deduserte empiriske konsekvensene testet ut, som dirkete leder til steg fire. Hvis disse empiriske konsekvensene viser seg å være sanne er denne teorien induktivt bekreftet, eller induktivt styrket bekreftelse av teorien \citep[s.12-13]{hempel1966}. Den hypotetisk deduktive metoden kan forklares som en vei med to kjøreretninger, fra data til teori går det induktive argumentet, som er bygd på deduktivt argument som går motsatt vei, altså fra teori til data. Problemet knyttet til Hypotetisk deduktiv metode er at ikke alt kan deduseres, samt at enklere teorier kan passe like bra eller bedre. Om man følger Ockhams barberkniv ønsker man å skjære bort alt unødvendig, da den enkleste teorien som oftetst vil være rett.
 
-Abduksjon er en liknende modell til den hypotetsik deduktive metoden, men har et par vir og vendinger som gjør dem klart forskjellige allikevel. Abduksjon følger ordets rette betydning og betyr at man samler seg til eller slutter seg om, den beste teorien som forklarer et fenomen. Er det ingen annen teori som gir like god eller bedre forklaring, har teorien induktivt styrket bekreftelse eller er bekreftet. I Abduksjon vil enkelhet tas hensyn til og hvis tre teorier forklarer det samme fenomenet vil det enkleste induktivt bekreftes.
+Abduksjon er en liknende modell til den hypotetsik deduktive metoden, men har et par vir og vendinger som gjør dem klart forskjellige allikevel. Der den hypotettisk deduktive metoden vil undersøke en hypotese kan en ved hjelp av abduksjon undersøke flere teorier.Så lenge teoriene gir en forklaring på fenomenet kan de sammenliknes, og evalueres. Deretter slutte seg til den beste teorien som forklarer et fenomen. Er det ingen annen teori som gir like god eller bedre forklaring, har teorien induktivt styrket bekreftelse eller er bekreftet.Dette kan oppfattes som subjektivt, for hva er egentlig en bedre forklaring når begge terorier forklare fenomenet. I Abduksjon vil enkelhet tas hensyn til og hvis tre teorier forklarer det samme fenomenet vil det enkleste induktivt bekreftes.
 
 \hypertarget{replikasjonskrisen}{%
 \section{Replikasjonskrisen}\label{replikasjonskrisen}}
 
 En viktig faktor i vitenskapens unione søken mot et bedret kunnskapsbilde er åpenhet, det skal kunne testes av andre forskere at man får samme data fra samme forsøk. Dette er for å kunne styrke eller svekke et fenomens teori, og kanskje kunne oppdage en ny teori. For at dette skal kunne skje må forskningen være repliserbar. Dette er ikke vært gjennomført godt nok i de siste årene. Et økt fokus har gjort at det har kommet tall på problemene. 1576 forskere fikk spørsmål om det var en signifikant krise når det kommer til reproduserbarhet i forskning, i en undersøkelse for journalen Nature, der 52\% av deltakerne var enige i det \citep{Baker2016}.\\
-Forklaringen på hva som står bak denne krisen er bestående av en hel haug med små og store bidragsytende faktorer. Den minst beskuende og tillitsfulle forklaringen ligger i statistikken. Sånn at replikasjonskrisen kan være et produkt av to statstiske faktorer. De fleste hypoteser vi tester er usanne, og nivået for statistisk signinikans er for lavt (p=\textless0,05). Det er tvilsomme forskningspraksiser, som f.eks tuklinger med data, p-hacking, fjerning av materiale. Det er mange små studier, som fører til lav statistisk styrke. Det publiseres ikke like ofte studier med kjedelige eller negative resultater \citep{bird2020}. Det er også kraftig motivasjon for å få frem data med overraskende, eller nyttig resultat, som kan føre til at det blir gjort små ting som gjør at data ikke kan repliseres\citep{romero2017}.\\
+
+Forklaringen på hva som står bak denne krisen er bestående av en hel haug med små og store bidragsytende faktorer. Den minst beskuende og tillitsfulle forklaringen ligger i statistikken. Sånn at replikasjonskrisen kan være et produkt av to statstiske faktorer. De fleste hypoteser vi tester er usanne, og nivået for statistisk signinikans er for lavt (p=\textless0,05).Dette forklarer bird ved hjelp av basefrekvensfeilen. Birds forklaring på replikasjonskrisen er at basefrekevnsfeilen vil oppstå når man trekker en slutning på et fenomen basert på en undersøkelse, men ikke hensyntar hvor normalt fenoment er i utgangspunktet. Han mener dette er en av grunnene for at det er så store problemer med å replisere studier.
+
+Det forekommer tvilsomme forskningspraksiser, som f.eks tuklinger med data, p-hacking, fjerning av materiale. Det er mange små studier, som fører til lav statistisk styrke. Det publiseres ikke like ofte studier med kjedelige eller negative resultater \citep{bird2020}. Det er også kraftig motivasjon for å få frem data med overraskende, eller nyttig resultat, som kan føre til at det blir gjort små ting som gjør at data ikke kan repliseres\citep{romero2017}.\\
+
 For meg høres dette ut som et kombinert problem. Kanskje er verden sånn at vi ikke presterer den beste forskningen i ett frittstående konkurransebasert miljø. Det kan være at det er enklere å få navnet opp og frem med noe kontroversielt enn med noe som støtter en allerede eksisterende teori. I det idrettsvitenskaplige fagfeltet er det ofte små utvalg i intervensjoner som gjennomføres, og med relativt kort varighet i forhold til adaptasjonene som skal måles på, som gjør at det krever at mye skal stemme for å få et signifikant resultat, som kan forsterke publikasjonsskjevheten, og dårlig forskningspraksis for å kunne få signifikante resultater.
 
 \hypertarget{study-designs}{%
@@ -437,37 +394,41 @@ I denne opggaven om studie design vil jeg bruke QALMRI metoden \citep{brosowsky2
 \hypertarget{hva-undersuxf8ker-disse-studiene}{%
 \section{Hva undersøker disse studiene?}\label{hva-undersuxf8ker-disse-studiene}}
 
-Den overordnede tematikken i mine utvalgte studier er trenigsfrekvens, og hvilke påvirkninger den har på adaptasjonene. Treningsfrekvens beskrives i litteraturen som hvor mange treningsøkter som gjennomføres i en gitt tidsperiode, men også som hvor mange ganger en muskelgruppe blir trent i løpet av en periode eller hvor mange økter som blir gjennomført \citep{kraemer2004, schoenfeld2016}.
+Den overordnede tematikken i mine utvalgte studier er trenigsfrekvens, og hvilke påvirkninger den har på adaptasjonene. Treningsfrekvens beskrives i litteraturen som hvor mange treningsøkter som gjennomføres i en gitt tidsperiode, men også som hvor mange ganger en muskelgruppe blir trent i løpet av en periode eller hvor mange økter som blir gjennomført \citep{kraemer2004, schoenfeld2016}. Alle disse studiene kontrollerer volum på den nevnte definisjonen.
 
-Studiene utforsket tilpasningene til styrketrening med forskjellig treningsøkter med likt treningsvolum. De ønsket altså besvare hvilken treningsfrekvens som ga de beste tilpassningene \citep{johnsen2021, brigatto2019, gentil2018, saric2019, lasevicius2019}.
+Studiene utforsket tilpasningene til styrketrening med forskjellig antall treningsøkter med likt ukentlig treningsvolum. De ønsket altså besvare hvilken treningsfrekvens som ga de beste tilpassningene \citep{johnsen2021, brigatto2019, gentil2018, saric2019, lasevicius2019}.
 
 \hypertarget{hva-kan-forklare-resultatene}{%
 \section{Hva kan forklare resultatene?}\label{hva-kan-forklare-resultatene}}
 
-Alle disse studiene hadde en forklaring for hvorfor studien ble gjort formulert som et form for spørsmål, men det var også hypoteser i introduskjonen. For eksempel skrev \citep{brigatto2019} at basert på tidligere forskning ville de forvente bedre adaptasjoner i gruppen som trente 2x 8 set per uke enn i gruppen som trente 1x 16 set per uke. Dette skilte seg fra studiene som sammenlinket høyere frekvenser. \citep{saric2019} som sammenlinket 3 vs 6 økter per uke med likt ukentlig treningsvolum, formulerte en hypotese om at det ville være like adaptasjoner, basert på studiens design og tidligere forskning med kontrollert ukentlig volum og liknende protokoller. Det kan også være andre ting en den tenkte årsaksammenhengen som kan forklare hypotesen, det kan være bias, sjanse, virkning-årsak, og forvirrende faktorer \citep{hulley_2013}
+Alle disse studiene hadde en forklaring for hvorfor studien ble gjort formulert som et form for spørsmål, men det var også hypoteser i introduskjonen. I introduksjonen forklares bakgrunnen for studien, og hvilke funn som kan forventes basert på tidligere fagfellevurdert forskning. For eksempel skrev \citep{brigatto2019} at basert på tidligere forskning ville de forvente bedre adaptasjoner i gruppen som trente 2x 8 sett per uke enn i gruppen som trente 1x 16 set per uke. Dette skilte seg fra studiene som sammenlinket høyere frekvenser. \citep{saric2019} som sammenlinket 3 vs 6 økter per uke med likt ukentlig treningsvolum, formulerte en hypotese om at det ville være like adaptasjoner, basert på studiens design og tidligere forskning med kontrollert ukentlig volum og liknende protokoller. Dette er en styrke i alle studiene, og de fokuserer på liknende intervensjoner, og forklarer begrensningene når de sammenlikner med mindre liknende protokoller. Det kan også være andre ting en den tenkte årsaksammenhengen som kan forklare hypotesen, det kan være bias, sjanse, virkning-årsak, og forvirrende faktorer \citep{hulley_2013}
 
 \hypertarget{hvilken-sammenheng-har-hypotese-med-eksisterende-litteratur-i-studiene}{%
 \section{Hvilken sammenheng har hypotese med eksisterende litteratur i studiene?}\label{hvilken-sammenheng-har-hypotese-med-eksisterende-litteratur-i-studiene}}
 
 Logikken i veien til en hypotese eller spørsmål i disse studiene som undersøker effekten av forskjellige treningsfrekvenser baseres i alle disse studiene på tidligere evidens fra andre fagfellevurderte artikler\citep{brigatto2019, gentil2018, johnsen2021, saric2019, lasevicius2019}. Selv om disse studiene undersøker det samme overordnede spørsmålet, gjør de metodiske forskjellene i studiene at formuleringen av hypotesene blir forskjellig som vist i avsnittet over.
 
-Studiene som har undersøkt høyere frekvenser opp mot hverandre \citep{johnsen2021, saric2019} bruker også den samme vitenskaplige evidensen for å komme frem til sin hypotese som studiene som undersøker lavere frekvenser\citep{brigatto2019, gentil2018, lasevicius2019}. Studiene med høyere frekvenser, legger i tilegg vekt på at det er mindre forsket på, og støtter seg derfor på generell evidens om at likt treningsvolum gir like adaptasjoner\citep{johnsen2021, saric2019}.
+Studiene som har undersøkt høyere frekvenser opp mot hverandre \citep{johnsen2021, saric2019} bruker også den samme vitenskaplige evidensen for å komme frem til sin hypotese som studiene som undersøker lavere frekvenser\citep{brigatto2019, gentil2018, lasevicius2019}. En styrke ved Studiene med høyere frekvenser,er at de i tillegg legger vekt på at det er mindre forsket på, og støtter seg derfor på generell evidens om at likt treningsvolum gir like adaptasjoner\citep{johnsen2021, saric2019}.
 
 \hypertarget{hvilke-forskjeller-er-det-i-de-metodiske-valgene-i-studiene}{%
 \section{Hvilke forskjeller er det i de metodiske valgene i studiene?}\label{hvilke-forskjeller-er-det-i-de-metodiske-valgene-i-studiene}}
 
-Alle disse studiene har en lik type design. Studiene som undersøkes kalles longituelle studier. Den ekspermientielle tilnærmingen baserer seg på to randomiserte grupper, som følger to forskjellige forutbestemte protokoller for å se om det gir utslag på pre til post test resultater. Randomiserte kontrolerte forsøk som dette kalles, gjøres for å undersøke en bestemt variabel, og er en streng rigid metode for å finne årask-virkning mellom variabelen og utfallet \citep{sibbald1998}. Treningsfrekvensen er variabelen som undersøkes i disse studiene, og basert på tidligere forskning må de ha et likt totalt treningsvolum i begge gruppene, for å kunne undersøke effekten av frekvensen best mulig. Det som varierer i disse studienes metoder er varighet på intervensjon, testmetoder, antall deltakere, frekvens som nevnt tidligere og til en viss grad hvilket samfunns segment forsøkspersonene tilhører.
+Alle disse studiene har en lik type design. Studiene som undersøkes kalles longituelle studier. Den ekspermientielle tilnærmingen baserer seg på to randomiserte grupper, som følger to forskjellige forutbestemte protokoller for å se om det gir utslag på pre til post test resultater. Randomiserte kontrolerte forsøk som dette kalles, gjøres for å undersøke en bestemt variabel, og er en streng rigid metode for å finne årask-virkning mellom variabelen og utfallet \citep{sibbald1998}. Dette gjøres ved at en gruppe mottar en type behandling eller trening, og sammenliknes opp mot en annen gruppe som ofte kalles kontrollgruppe, som enten mottar annen behandling/trening, eller ingenting. Randomiserte kontrolerte studier er dyre, krever mere tid, men gir til gjengjeld, sammen med tidligere evidens, bedre forklaring på årsak-virkning enn kohort studier og case-controll design\citep{hulley_2013}.
 
-Alle studiene har beskrivende data på sin deltaker masse. \citep{saric2019} sin studie hadde en deltaker masse bestående av 30 styrketrente menn, (gjennomsnitt+Standardavvik) alder = 22.6 +- 2.1 år, høyde = 183,1+-6,0cm, og kroppsvekt = 87,2+-11,6kg. Denne studien hadde en treningsintervensjon med varighet på 6 uker, og undersøkte muskelstyrke ved hjelp av 1RM, muskulær utholdenhet med RM på 60\% av 1RM, og muskeltykkelse ved hjelp av ultralyd {[}@saric2019{]}. De samme testene pre og post ble gjort i studien til \citep{brigatto2019}, men som testet lavere frekvenser mot hverandre, og med en lengere intervensjon. Disse studiene undersøkte begge frekvens på styrketrente menn, men med såpass store metodiske variasjoner at hypotesene er forskjellige.
+Treningsfrekvensen er variabelen som undersøkes i disse studiene, og basert på tidligere forskning må de ha et likt totalt treningsvolum i begge gruppene, for å kunne undersøke effekten av frekvensen best mulig. Derfor er måten de gjennomfører randomisert kontrolerte studier her, ved å dele en gruppe mennesker fra samme segment, gjennom en like lang treningsintervensjon, med likt ukentlig volum, men forskjllig frekvens. Dette er hensyntatt og er en styrke i alle studiene. Det som varierer i disse studienes metoder er varighet på intervensjon, testmetoder, antall deltakere, frekvens som nevnt tidligere og til en viss grad hvilket samfunns segment forsøkspersonene tilhører.
+
+Alle studiene har beskrivende data på sin deltaker masse. \citep{saric2019} sin studie hadde en deltaker masse bestående av 30 styrketrente menn, (gjennomsnitt+Standardavvik) alder = 22.6 +- 2.1 år, høyde = 183,1+-6,0cm, og kroppsvekt = 87,2+-11,6kg. Dette er en styrke med denne studien, da det er et froholdsvis høyt nivå på deltakerne, og et relativt stort utvalg sammenliknet med andre studier. Svakheten med denne studien er at den bare hadde en treningsintervensjon med varighet på 6 uker.
+
+Stuiden til \citep{saric2019} undersøkte muskelstyrke ved hjelp av 1RM, muskulær utholdenhet med RM på 60\% av 1RM, og muskeltykkelse ved hjelp av ultralyd. De samme testene pre og post ble gjort i studien til \citep{brigatto2019}, men som testet lavere frekvenser mot hverandre, og med en lengere intervensjon, som er en av styrkene i den studien. Disse studiene undersøkte begge frekvens på styrketrente menn, men med såpass store metodiske variasjoner at hypotesene er forskjellige.
 
 I alle studiene brukes det flere forskjellige statistiske tester. Frekventiske tester er brukt i samtlige, som feks Shapiro-wilk test \citep{brigatto2019, johnsen2021, lasevicius2019}, t-test \citet{brigatto2019}, og 2x2 repetert ANOVA \citep{brigatto2019, johnsen2021} . Den andre måten er å estimmere en hypoteses sansynlighet ved hjelp av bayesisk sansynlighet, som i tillegg til frekventistisk statestikk blir gjort i \citep{saric2019}.
 
 Alle de evaluerte studiene har også beregnet effekt størrelse fra pre-post test resultatene \citep{brigatto2019, gentil2018, johnsen2021, saric2019, lasevicius2019}.
 
-\hypertarget{resultater-og-konklusjon}{%
-\section{\texorpdfstring{\textbf{Resultater og konklusjon}}{Resultater og konklusjon}}\label{resultater-og-konklusjon}}
+\hypertarget{hva-er-resultatene-og-konklusjonene}{%
+\section{\texorpdfstring{\textbf{Hva er resultatene og konklusjonene}}{Hva er resultatene og konklusjonene}}\label{hva-er-resultatene-og-konklusjonene}}
 
-I alle studiene besvares hypotesen, men det presiseres også at det trengs mer forskning på området for å kunne konkludere. Det gis også forklaringer på svakheter i studiene som for eksempel små utvalg, og kort varighet. Disse studiene viser også at den metodiske utformingen er viktig da frekvensens påvirkning kan gi signifikant p-verdi i en type studie, med lavere frekvenser som sammenliknes, men ikke i andre. Derfor er også konklusjonene litt forskjellige, og gjelder kun for frekvensene som sammenliknes, og ikke treningsfrekvens generelt \citep{johnsen2021, brigatto2019, gentil2018, saric2019, lasevicius2019}.
+I alle studiene besvares hypotesen, men det presiseres også at det trengs mer forskning på området for å kunne konkludere. Det gis også forklaringer på betydningen av metodiske svakheter i studiene som for eksempel små utvalg, og kort varighet som . Disse studiene viser også at den metodiske utformingen er viktig da frekvensens påvirkning kan gi signifikant p-verdi i en type studie, med lavere frekvenser som sammenliknes, men ikke i andre. Derfor er også konklusjonene litt forskjellige, og gjelder kun for frekvensene som sammenliknes, og ikke treningsfrekvens generelt \citep{johnsen2021, brigatto2019, gentil2018, saric2019, lasevicius2019}.
 
 \hypertarget{huxf8yere-treningsvolum-leder-til-bedre-styke-og-muskelvekst-i-underekstremiteter-hos-utrente}{%
 \chapter{Høyere treningsvolum leder til bedre styke og muskelvekst i underekstremiteter hos utrente}\label{huxf8yere-treningsvolum-leder-til-bedre-styke-og-muskelvekst-i-underekstremiteter-hos-utrente}}
@@ -592,7 +553,7 @@ For å måle mager masse ble kroppsmassesammensetning målt i dual-energy X-ray 
 \hypertarget{resultater-3}{%
 \section{Resultater}\label{resultater-3}}
 
-12 uker med styrketrening resulterte i en signifikant økning i muskelstyrke(kombinert resultat) hos begge grupper hhv. 31±14(14.20)\% for multiple- sett (P=0.001) og 25±13(12.90)\% for multiple- sett (P=0.001). Forskjellen i styrkeøkningen mellom gruppene var signifikant på (P- 0.02988). Endringen i mager masse var også signifikant, hhv. 3,3±4\% for multiple- sett (P=0.001) og 2±4\% for single- sett (P=0.001) men her var det ikke signiffikant forskjell mellom gruppene (P=0.193, fig 4.2).
+12 uker med styrketrening resulterte i en signifikant økning i muskelstyrke(kombinert resultat) hos begge grupper (fig5.2) hhv. 31±14(14.20)\% for multiple- sett (P=0.001) og 25±13(12.90)\% for multiple- sett (P=0.001)(fig.5.3). Forskjellen i styrkeøkningen mellom gruppene var signifikant på (P- 0.02988). Endringen i mager masse var også signifikant, hhv. 3,3±4\% for multiple- sett (P=0.001) og 2±4\% for single- sett (P=0.001) men her var det ikke signiffikant forskjell mellom gruppene (P=0.193, fig 5.1).
 
 \begin{figure}
 \includegraphics[width=1.2\linewidth]{_main_files/figure-latex/Prosentvis økning figur dexa-1} \caption{Figuren viser prosentvis økning i mager masse fra pre til post mellom multiple- sett og single- sett}(\#fig:Prosentvis økning figur dexa)
@@ -609,12 +570,14 @@ For å måle mager masse ble kroppsmassesammensetning målt i dual-energy X-ray 
 \hypertarget{diskusjon-2}{%
 \section{Diskusjon}\label{diskusjon-2}}
 
+Hovedfunnene i denne studien er at høyere volum gir bedre effekt enn lavere volum for muskelstyrke, og samsvarer bra med tidligere studier med liknende treningsprotokoller \citep{rønnestad2007, starkey1996, radaelli2015}. Endringer i muskelstyrke er vist i en metaanalyse bestående av 61 randomiserte kontrolerte studier, med varighet på minimum 4uker å ha et gradert dose-respons forhold \citep{Ralston2017}.
+
+I denne studien får deltakerne trent i snitt 15,6 sett per muskelgruppe i låret(quadriceps, og hamstrings) per uke på beinet som trener flere sett per øvelse, og 5,2 sett på beinet som trente ett sett per øvelse. Dermed kunne man kanskje tenke seg at det også ville skille signifikant mellom protokollene i endringene av mager masse, som vist i en matanalyse der de fant at hvert ekstra sett ledet til 0,36\% bedre adaptasjoner\citep{schoenfeld2016}. Det er derfor viktig å huske at deltakerne her er utrente, og resultatene av ett sett kan være velig gode, og gi ikke signifikante forskjeller\citep{bottaro2011, galvao2005, mcbride2003}. Det kunne derfor vært interresant å se på godt trente personer gjennomføre nøyaktig samme protokoll, og gi mere konkret evidens til å si noe om et gradert dose respons forhold.
+
 \hypertarget{konklusjon}{%
 \subsection{Konklusjon}\label{konklusjon}}
 
-Totalt sett viste denne studien at multiple- sett ga en bedre økning i muskelstyrke sammenlignet med single- sett. Selv om begge gruppene hadde økning vil det kunne være mer hensiktsmessig å trene styrketrening med multiple- sett.
-
-Har ikke fått ut all data som er planlagt, klarer heller ikke beskrive helt sikkert hva testene som er kjørt viser, så dermed er det vrient å diskutere.
+I denne studien ser vi at det er mest effektivt å trene med høyere treningsvolum for styrke i underkroppen, men at det ikke er nødvendig for muskelveksten. Det kan tenkes at for å oprettholde denne utviklingen, må etterhvert treningsvolumet økes fra singel-sett protokollen til noe liknende flere.-sett protokollen følger, basert på det graderte doserespons forholdet.
 
   \bibliography{referanser.bib}
 
