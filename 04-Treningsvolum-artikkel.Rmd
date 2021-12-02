@@ -1,11 +1,10 @@
-
 # Høyere treningsvolum leder til bedre styke og muskelvekst i underekstremiteter hos utrente
 
 ## Introduksjon
 
 Styrketrening er anerkjent som en god metode til å forbedre muskelstyrke, evnen til kraftproduksjon, skape muskelhypertrofi, samt forbedre en rekke helsemarkører [@kraemer2002]. Kunnskap om hvordan man best tilrettelegger styrketrening for å opnå de ønskede adaptasjonene viktig, da styrketrening består av en rekke variabler som kan manipuleres ut ifra behov og gi ønsket adaptasjon [@kraemer2004; @bird2005]. Disse variablene som kan påvirke adaptasjoner er volum, frekvens, pauselengde, øvelsesutvalg, og øvelsesrekkefølge [@American2009].
 
-Treningsvolum og den tilknyttede dose-reponsen er således interesant for å øke effektiviteten av trening. De akutte responsene på forskjllige treningsvolum er undersøkt, og myofibrililær muskelproteinsyntesen ble signifikant økt når deltakere gjennomførte 3set på 70% av 1rm, vs 1 sett målt 5 og 29 timer etter trening [@burd2010]. Når det kommer til lengere varende intervensjonsstudier er det konflikt relatert til treningsvolumets påvirkning. Noen studier har vist signifikant bedre tilpassninger til høyere volum enn lavere volum [@rønnestad2007;@starkey1996;@radaelli2015 ]. Andre studier har vist at det ikke skiller seg i tilpassninger til styrketrening med forskjellig volum[@bottaro2011; @galvao2005;@mcbride2003]. Treningssadaptasjoner er avhengig av en rekke biologiske variabler. Målet med denne studien er å fjerne så mye biologisk påvirkning som mulig og undersøke effekten av volumet alene så godt som mulig.
+Treningsvolum og den tilknyttede dose-reponsen er således interesant for å øke effektiviteten av trening. De akutte responsene på forskjllige treningsvolum er undersøkt, og myofibrililær muskelproteinsyntesen ble signifikant økt når deltakere gjennomførte 3set på 70% av 1rm, vs 1 sett målt 5 og 29 timer etter trening [@burd2010]. Når det kommer til lengere varende intervensjonsstudier er det konflikt relatert til treningsvolumets påvirkning. Noen studier har vist signifikant bedre tilpassninger til høyere volum enn lavere volum [@rønnestad2007; @starkey1996; @radaelli2015 ]. Andre studier har vist at det ikke skiller seg i tilpassninger til styrketrening med forskjellig volum[@bottaro2011; @galvao2005; @mcbride2003]. Treningssadaptasjoner er avhengig av en rekke biologiske variabler. Målet med denne studien er å fjerne så mye biologisk påvirkning som mulig og undersøke effekten av volumet alene så godt som mulig.
 
 ## Deltakere og studieoversikt
 
@@ -78,11 +77,9 @@ dxadata %>%
 
 I denne studiene ble deltakerne testet i pre og post for styrke, og forskjllige mål på muskelvekst.Testene for styrke var isokinetsik og isometrisk unilateral kneekstensjon, og unilateral beinpress. Målene for muskelvekst var måling av kroppsmassesammensetning gjort med DEXA-scan.
 
-
-
 ## Databehandling
 
-All deskriptiv data er presntert som gjennomsnitt og Standard avvik gjennomsnitt(standard avvik). P-verdien er beregnet gjjenom en ANCOVA modell på endringen fra pre til post i de to gruppene. All databehandling er gjort i Rstudio.
+All deskriptiv data er presntert som gjennomsnitt og Standard avvik gjennomsnitt(standard avvik), hvis ikke annet opplyst. P-verdien er beregnet gjjenom en ANCOVA modell på endringen fra pre til post i de to gruppene. All databehandling er gjort i Rstudio.
 
 ## Treningsprotokoll
 
@@ -92,10 +89,21 @@ Underkroppsøvelsene ble gjennomført i følgende rekkefølge: unilateral beinpr
 
 ## Testprotokoll
 
+### Muskelstyrke
+
+Styrken i isokinetisk og isometrisk unilateral kneekstensjon ble målt i et dynamometer(Cybex 6000, Cybex International, Medway, MA, USA). Deltakerne ble målt i maksimal isokinetisk dreiemoment ved tre forskjellige hastigheter(60°, 120°, og 240° s-1). Etter isokinetisk test, ble maksimal kontraksjonsmoment med 30°kneflekson(full ekstensjon beskrives her som 90°).
+
+Maksimal styrke ble målt som 1 repetiosjons maks (1RM), i unilateral beinpress, og kneekstensjon. Testingen for hver øvelse startet med en standardisert oppvarming bestående av 10 reps på 50%av estimert 1RM(E1RM), 6repetisjoner på 75% av E1RM, og 3 repetisjoner på 85% av E1RM. Deretter ble 1RM funnet ved at vekten ble økt frem til de ikke lengere kunne gjennomføre repetisjonen med fult bevegelsesutslag. Forsøkspersonene ble gitt 4-6 forsøk på å finne 1RM.
+
+På alle styrketester ble pre test gjennomført to ganger for alle forsøkspersoner, med minimum 4 dager mellom hver gang. Det maksimale resultatet fra de to testene av hver øvelse ble brukt i analysen. Resultatene fra muskelstyrke i pre test(1RM, isokinetisk, og isometrisk) ble slått sammen til et kombinert resultat. Det kombinerte resultatet bestod av en gjennomsnittelig verdi av alle styrketestene, hvor hver test ble gitt lik betydning.
+
+### Mager masse
+
+For å måle mager masse ble kroppsmassesammensetning målt i dual-energy X-ray absorptiometry (DXA) (Lunar Prodigy, GE Healthcare, Oslo, Norway), både pre og post treningsintervensjon. Deltakerne ble bedt om å faste 2timer, og avstå fra intensiv fysisk aktivitet i 48 timer i forkant av DXA.
 
 ## Resultater
 
-12 uker med styrketrening resulterte i en signifikant økning i muskelstyrke hos begge grupper hhv. 31±14(14.20)% for multiple- sett (P=0.001) og 25±13(12.90)% for multiple- sett (P=0.001). Forskjellen i styrkeøkningen mellom gruppene var signifikant på (P- 0.02988). Endringen i mager masse var også signifikant, hhv. 3,3±4% for multiple- sett (P=0.001) og 2±4% for single- sett (P=0.001) men her var det ikke signiffikant forskjell mellom gruppene (P=0.193, fig 4.2).
+12 uker med styrketrening resulterte i en signifikant økning i muskelstyrke(kombinert resultat) hos begge grupper hhv. 31±14(14.20)% for multiple- sett (P=0.001) og 25±13(12.90)% for multiple- sett (P=0.001). Forskjellen i styrkeøkningen mellom gruppene var signifikant på (P- 0.02988). Endringen i mager masse var også signifikant, hhv. 3,3±4% for multiple- sett (P=0.001) og 2±4% for single- sett (P=0.001) men her var det ikke signiffikant forskjell mellom gruppene (P=0.193, fig 4.2).
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -139,9 +147,6 @@ summary(m0)
 confint(m0)
 plot(m0)
 ```
-
-
-
 
 ```{r Prosentvis økning figur dexa, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", out.width="120%", fig.cap = "Figuren viser prosentvis økning i mager masse fra pre til post mellom multiple- sett og single- sett"}
 dat.mean <- dat %>%
@@ -225,7 +230,7 @@ strengthvolume %>%
   theme(legend.position = c(0.1, 0.9))
 ```
 
-```{r Prosentvis økning figur styrke, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", out.width="120%", fig.cap= "Figuren viser prosentvis endring i muskelstyrke mellom multiple- sett og singe- sett fra pre til post test"} 
+```{r Prosentvis økning figur styrke, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE, results="hide", out.width="120%", fig.cap= "Figuren viser prosentvis endring i muskelstyrke mellom multiple- sett og singe- sett fra pre til post test"}
 styrke.gjennomsnitt <- styrke1 %>%
   group_by(sets) %>%
   summarise(m = mean(prosentvis.endring, na.rm = TRUE),
@@ -257,13 +262,8 @@ styrkemodell %>% # Lager en figur pre- post per gruppe
 
 ## Diskusjon
 
-
 ### Konklusjon
 
 Totalt sett viste denne studien at multiple- sett ga en bedre økning i muskelstyrke sammenlignet med single- sett. Selv om begge gruppene hadde økning vil det kunne være mer hensiktsmessig å trene styrketrening med multiple- sett.
 
-
 Har ikke fått ut all data som er planlagt, klarer heller ikke beskrive helt sikkert hva testene som er kjørt viser, så dermed er det vrient å diskutere.
-
-#En meget god start! Setningen "Styrketrening har en viktig rolle i samfunnet" er litt vel "bombastisk" du trenger ikke løse alle verdens problemer i din rapport. Gå istedenfor direkete på temaet! (F eks Styrketrening er en god metode for å forbedre ... ). Forrige setning gir ikke stød for " Derfor er kunnskap om hvordan man best tilrettelegger styrketrening for å opnå de ønskede adaptasjonene viktig". Du må legge inn et tydeligere argument for denne påstanden. Om styrketrening allerede er en god metode hvorfor trenger vi da mer kunnskap? 
-Når jeg knitter din Rmd-fil er referanser litt merkelig formaterte, du kan forandre dem i .b.-filen for å gi mer konsekvent formattering. Beskrivelsen av deltakerne blir litt gal når " være inntolerante til lokalbeøvelse", det "ikke" du bruker i starten av setningen faller litt vekk. Mulig å omformulere? Ta vekk metodebeskrivelser som du ikke bruke (f eks Målene for muskelvekst var tversnittsareal av vastus lateralis, medialis, intermedius, og rectus femoris målt med MRI, og måling av). Standardavvik skrives som et ord. Se generell feedback ang statistikkdelen. Vi trenger mer info om modellen som ble brukt. Bruk generell feedback også når du ferdigstiller resultater og diskusjon. Topp start! 
