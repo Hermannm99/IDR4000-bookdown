@@ -23,9 +23,8 @@ V<sub>O2max</sub> ble målt ved hjelp av en metabolsk analysator med miksekammer
 
 For hvert medgåtte minutt av testen ble hastigheten på møllen økt med 1km/t, helt til utmattelse, hvor testen ble avsluttet. Deltakernes hjertefrekvens ble også registrert under hele testen. Når testen ble avsluttet ble deltakerne bedt om å rapportere opplevd anstrengelse ved hjelp av Borg-skala [@borg1982]. Maksimal hjertefrekvens under testen ble også registrert. Ett minutt etter avsluttet test ble hjertefrekvens registrert, og det ble målt og analysert blodlaktat (Biosen C-line, EKF Diagnostics, Barleben, Germany).
 
-## Resultater
 
-```{r Tabell, echo=FALSE, message=FALSE, warning=FALSE}
+```{r Tabell, echo=FALSE, message=FALSE, warning=FALSE, tab.cap= "Deltakeroversikt"}
 # Laster inn pakker og datasett
 library(readxl)
 library(tidyverse) 
@@ -61,6 +60,7 @@ vo2data %>%
   add_footer_row(values = "Verdier er gitt som gjennomsnitt og (Standardavvik)", colwidths = 3) %>%
    autofit()
 ```
+## Resultater
 
 ```{r Realabilitet, echo=FALSE, message=FALSE, warning=FALSE}
 reliabilitet <- read_excel("data/realabilitet-uttrekning.xlsx") %>%
