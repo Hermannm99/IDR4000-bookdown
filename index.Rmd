@@ -7,7 +7,10 @@ documentclass: book
 bibliography: referanser.bib
 site: bookdown::bookdown_site
 ---
-# Realabilitet
+## repository
+Tilhørende repository: https://github.com/Hermannm99/IDR4000-bookdown.git
+
+# Reliabilitet
 
 ## Introduksjon
 
@@ -93,8 +96,6 @@ read_excel("data/vo2g1.xlsx") %>%
 ```
 
 ## Diskusjon
-
-4,04%
 
 Resultatet i vår realibiltetsstudie er funnet av typefeilen på 4,04. Ettersom testing av maksimalt oksygenopptak er en test som gjennomføres til utmattelse, vil man kunne forvente en viss variasjon i testresultatene ettersom opplevd anstrengelse kan påvirkes av flere ulike variabler [@halperin2015]. For å redusere støy vil flere faktorer være nyttig å ta hensyn til under slik testing. Som nevnt i metoden vil standardisering av matinntak, koffeininntak, utstyr og tidspunkt for gjennomføring av test være med på å kunne sikre intern validitet i resultatene. Eksempler er deltakernes kjennskap til testen, verbal oppmuntring og personer tilstede under testen er andre faktorer som potensielt kan bidra til støy [@halperin2015]. Felles for alle faktorer er at graden av påvirkning på resultatene muligens reduseres ved hjelp av en standardisert testprotokoll. Deltakerne - og testlederne, sin kjennskap til testen er en annen faktor som trolig påvirker resultatene i vårt prosjekt. I dette tilfellet fantes det enkelte deltakere som hadde gjennomført en liknende test flere ganger, og en kan da forvente en mindre grad av variasjon mellom resultatene på test 1 og test 2, sammenlignet med de deltakerne som gjennomførte testen for første gang på pretest. Dette fordi kjennskapen og kunnskapen de tilegnet seg på pre-test, trolig spiller inn på testresultatene. Typefeilen på 4.04% kan også tyde på at enkelte av disse resultatene kan være utsatt for støy av ulik sort [@hopkins2000].
 

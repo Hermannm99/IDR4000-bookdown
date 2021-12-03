@@ -1,4 +1,4 @@
-# Labrapport - cDNA synthesis using Superscript IV and general qPCR
+# Labrapport - RNA
 
 ## Formål
 
@@ -79,7 +79,7 @@ dat %>%
   annotate("text", x = 15, y = -3, hjust = 0, label = "Effektivitetsfaktor ~ 2\n gitt slope ~ 3.3")
 ```
 
-```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.cap = "Efficiency calculations made from serial dilution of cDNA"}
+```{r, echo = FALSE, warning=FALSE, message=FALSE, fig.cap = "Efficiency kalkulasjoner basert på fortyningsserie av cDNA"}
 #konsekvente tall fra referansegen som vist i modellen?
 group1 <- read_quant5("./data/qpcr/group1-efficiency.xls", skip = 47) %>%
   mutate(ID = paste0(Well, "_", ID))
